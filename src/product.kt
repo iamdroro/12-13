@@ -1,13 +1,12 @@
-class product(var name:String, var price:Double, var edizm:String,  var vid:String, var kol:Int) {
-    /*val name:String="Павидло"
-   val price:Double=45.7
-   val edizm:String="Rubli"
-     val vid:String="Cjecs"
-    val kol:Int=200*/
-    fun info(){
-println("Наименование товара\n"+name+"\nЦена товара"+price+"\nЕдиницы измерения"+edizm+"\nВид товара"+vid+"\nКоличество товара"+kol)
+
+package product
+open class product(var name: String, var price: Double, var edizm: String, var vid:String, var kol:Int, var pribul: Double) {
+
+    open fun otv() {
+        println("Название: $name\n Цена: $price\n Единицы измерения: $edizm\n Вид товара: $vid\n" + " Количество: $kol\n"+"Прибыль: $pribul")
+
     }
-fun b(){
+open fun b(){
     println("название товара")
     println(name)
     println("Цена товара")
@@ -18,8 +17,10 @@ fun b(){
    println(vid)
     println("Введите кол-во")
    println(kol)
+    pribul=kol*price
+    println("Товар: $name\n Цена: $price\n Ед.изм: $edizm\n Вид товара: $vid\n Кол-во: $kol\n Прибыль: $pribul")
 }
-    fun a() {
+   open fun a() {
 
         println("Введите название товара")
         var name = readLine()!!.toString()
@@ -32,15 +33,11 @@ fun b(){
                 if (edizm>="a"&&edizm<="z"||edizm>="а"&&edizm<="я"||edizm>="A"&&edizm<="Z"||edizm>="А"&&edizm<="Я") {
                     println("Введите вид изделия")
                     var vid = readLine()!!.toString()
-                    if (vid>="a"&&vid<="z"||vid>="а"&&vid<="я"||vid>="A"&&vid<="Z"||vid>="А"&&vid<="Я") {
+                    if (edizm>="a"&&edizm<="z"||edizm>="а"&&edizm<="я"||edizm>="A"&&edizm<="Z"||edizm>="А"&&edizm<="Я") {
                         println("Введите кол-во")
                         var kol = readLine()!!.toInt()
-                        if(kol>0) {
-                            println("Название товара ${(name)}")
-                            println("Цена ${(price)}")
-                            println("Единицы измерния ${(edizm)}")
-                            println("Вид товара ${(vid)}")
-                            println("Кол-во товара ${(kol)}")
+                        if(price>0) {
+
                         }
                         else{
                             println("Кол-во не может быть отрицательныйм")}

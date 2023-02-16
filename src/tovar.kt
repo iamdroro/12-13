@@ -1,14 +1,14 @@
+import product.product
 fun main(){
     try{
+   val tov:product=product("Павидло",45.5,"руб","Соус",120,120*45.5)
+        tov.a()
+        tov.b()
+        tov.otv()
+val tov1:Pribul=Pribul("Чипсы",105.0,"руб",80,105.0*80)
+        tov1.Getinfo()
+        tov1.input()
 
-   val tov:product=product("Павидло", 45.7, "Rubli","Соус", 200)
-        tov.a()
-        tov.b()
-        tov.info()
-        val tov1:product=product("Павидло", 45.7, "Rubli","Соус", 200)
-        tov.a()
-        tov.b()
-        tov.info()
 
     }catch (e:Exception){
         println("Неправильный ввод данных")}
