@@ -1,13 +1,18 @@
-fun main() {
+import kino.kino
+fun main(){
     try {
-        val film:kino=kino( "Счастливы вместе", 1.38,275.5, 6, 150)
-        film.s()
-        film.m()
-film.inform()
-        val film1:kino=kino( "Счастливы вместе", 1.38,275.5, 6, 150)
-        film.s()
-        film.m()
-        film.inform()
-    }catch (e:Exception){
-        println("Неправильный ввод данных")}
+        val ott: kino = kino(
+            "Титаник",115.0,5.5,2,50,0.5*50
+        )
+        ott.otv()
+        ott.input()
+        ott.m()
+        val ott1: Kinoteatr = Kinoteatr("Акула",90.5,30.6,5,120,0.5*120)
+        ott1.Getinfo()
+        ott1.input()
+    }
+    catch (e:Exception){
+        println("Неверный ввод")
+    }
 }
+
